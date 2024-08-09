@@ -30,4 +30,11 @@ public class FjtcouserService {
         }
         return null; // Return null or handle this case as needed
     }
+    public Optional<Fjtcouser> authenticateUser(String userId, String password) {
+        Fjtcouser user = fjtcouserRepository.findByUserId(userId);
+        if (user != null && user.getPassword().equals(password)) {
+            return Optional.of(user);
+        }
+        return Optional.empty();
+    }
 }

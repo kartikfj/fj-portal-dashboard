@@ -17,12 +17,13 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/fjtcouser")
+@CrossOrigin(origins = "http://10.10.4.198:4200")
 public class FjtcouserController {
     @Autowired
     private DatabaseService databaseService;
     @Autowired
     private FjtcouserService fjtcouserService;
-
+    @CrossOrigin(origins = "http://10.10.4.198:4200")
     @GetMapping("/all")
     public List<Fjtcouser> getAllUsers() {
         return fjtcouserService.getAllUsers();
@@ -32,11 +33,14 @@ public class FjtcouserController {
     public String testEndpoint() {
         return "The GET request is working!";
     }
-    @GetMapping("/tables")
+    @GetMapping("/table")
     public List<String> getTables() {
         return databaseService.listTables();
     }
-
+    @GetMapping("/tables")
+    public List<String> listTables(@RequestParam(defaultValue = "") String search) {
+        return databaseService.listTables(search);
+    }
     @GetMapping("/columns")
     public String listColumns() {
         databaseService.listColumns();
