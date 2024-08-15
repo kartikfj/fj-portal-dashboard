@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:4200")
+
 @RestController
 @RequestMapping("/api")
 public class LoginController {
@@ -23,7 +25,7 @@ public class LoginController {
 
 //    @Autowired
  //   private JwtUtil jwtUtil;
-
+   @CrossOrigin(origins = "http://10.10.4.198:4200")
    @PostMapping("/login")
     public ResponseEntity<?> login(@RequestParam String userId, @RequestParam String password) {
        Optional<Fjtcouser> user = fjtcouserService.authenticateUser(userId, password);

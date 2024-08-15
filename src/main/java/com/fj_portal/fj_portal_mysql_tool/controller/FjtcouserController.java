@@ -17,15 +17,16 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/fjtcouser")
-@CrossOrigin(origins = "http://10.10.4.198:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 public class FjtcouserController {
     @Autowired
     private DatabaseService databaseService;
     @Autowired
     private FjtcouserService fjtcouserService;
-    @CrossOrigin(origins = "http://10.10.4.198:4200")
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/all")
     public List<Fjtcouser> getAllUsers() {
+        System.out.println("data");
         return fjtcouserService.getAllUsers();
     }
 
