@@ -1,4 +1,4 @@
-package com.fj_portal.fj_portal_mysql_tool.entity;
+package com.fj_portal.fj_portal_mysql_tool.primary.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

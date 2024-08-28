@@ -1,12 +1,12 @@
-package com.fj_portal.fj_portal_mysql_tool.controller;
+package com.fj_portal.fj_portal_mysql_tool.primary.controller;
 
 
-import com.fj_portal.fj_portal_mysql_tool.response.LoginResponse;
-import com.fj_portal.fj_portal_mysql_tool.service.FjtcouserService;
-import com.fj_portal.fj_portal_mysql_tool.entity.Fjtcouser;
+import com.fj_portal.fj_portal_mysql_tool.primary.entity.Fjtcouser;
+import com.fj_portal.fj_portal_mysql_tool.primary.response.LoginResponse;
+import com.fj_portal.fj_portal_mysql_tool.primary.service.FjtcouserService;
+import com.fj_portal.fj_portal_mysql_tool.primary.service.JwtService;
 
 //import config.JwtUtil;
-import com.fj_portal.fj_portal_mysql_tool.service.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,7 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class LoginController {
     @Autowired
-    private  JwtService jwtService;
+    private JwtService jwtService;
     @Autowired
     private FjtcouserService fjtcouserService;
 
@@ -35,7 +35,7 @@ public class LoginController {
            String jwtToken = jwtService.generateToken(users);
            Long expirationTime = jwtService.getExpirationTime();
 
-           LoginResponse  loginResponse = new LoginResponse();
+           LoginResponse loginResponse = new LoginResponse();
            loginResponse.setToken(jwtToken);
            loginResponse.setExpiresIn(expirationTime);
 

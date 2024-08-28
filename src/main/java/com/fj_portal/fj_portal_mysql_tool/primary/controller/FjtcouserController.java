@@ -1,16 +1,14 @@
-package com.fj_portal.fj_portal_mysql_tool.controller;
+package com.fj_portal.fj_portal_mysql_tool.primary.controller;
 
-import com.fj_portal.fj_portal_mysql_tool.entity.Fjtcouser;
+import com.fj_portal.fj_portal_mysql_tool.primary.entity.Fjtcouser;
 //import com.fj_portal.fj_portal_mysql_tool.repository.FjtcouserRepository;
 //import org.springframework.beans.factory.annotation.Autowired;
-import com.fj_portal.fj_portal_mysql_tool.repository.FjtcouserRepository;
-import com.fj_portal.fj_portal_mysql_tool.service.DatabaseService;
-import com.fj_portal.fj_portal_mysql_tool.service.FjtcouserService;
+import com.fj_portal.fj_portal_mysql_tool.primary.service.DatabaseService;
+import com.fj_portal.fj_portal_mysql_tool.primary.service.FjtcouserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;

@@ -1,8 +1,7 @@
-package com.fj_portal.fj_portal_mysql_tool.config;
+package com.fj_portal.fj_portal_mysql_tool.primary.config;
 
-import com.fj_portal.fj_portal_mysql_tool.entity.Fjtcouser;
-import com.fj_portal.fj_portal_mysql_tool.repository.FjtcouserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.fj_portal.fj_portal_mysql_tool.primary.entity.Fjtcouser;
+import com.fj_portal.fj_portal_mysql_tool.primary.repository.FjtcouserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,7 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Configuration
 public class ApplicationConfiguration {
 
-    private final FjtcouserRepository userRepository;
+    private FjtcouserRepository userRepository;
 
     public ApplicationConfiguration(FjtcouserRepository userRepository) {
         this.userRepository = userRepository;

@@ -1,7 +1,7 @@
-package com.fj_portal.fj_portal_mysql_tool.config;
+package com.fj_portal.fj_portal_mysql_tool.primary.config;
 
 
-import com.fj_portal.fj_portal_mysql_tool.service.JwtService;
+import com.fj_portal.fj_portal_mysql_tool.primary.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -1,4 +1,4 @@
-package com.fj_portal.fj_portal_mysql_tool.service;
+package com.fj_portal.fj_portal_mysql_tool.primary.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;

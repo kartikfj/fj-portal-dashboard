@@ -1,4 +1,4 @@
-package com.fj_portal.fj_portal_mysql_tool.service;
+package com.fj_portal.fj_portal_mysql_tool.primary.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

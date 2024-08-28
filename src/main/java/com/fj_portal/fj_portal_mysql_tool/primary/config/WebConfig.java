@@ -1,7 +1,5 @@
-package com.fj_portal.fj_portal_mysql_tool.config;
+package com.fj_portal.fj_portal_mysql_tool.primary.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

@@ -1,4 +1,4 @@
-package com.fj_portal.fj_portal_mysql_tool.config;
+package com.fj_portal.fj_portal_mysql_tool.primary.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -40,8 +40,7 @@ public class SecurityConfiguration {
                 // Configure authorization rules
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers("/api/login/**").permitAll()
-                                .anyRequest().authenticated()
+                                .anyRequest().permitAll()
                 )
 
                 // Configure session management

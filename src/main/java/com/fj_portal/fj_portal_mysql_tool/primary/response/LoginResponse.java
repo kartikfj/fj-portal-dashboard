@@ -1,4 +1,4 @@
-package com.fj_portal.fj_portal_mysql_tool.response;
+package com.fj_portal.fj_portal_mysql_tool.primary.response;
 
 public class LoginResponse {
     private String token;

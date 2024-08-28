@@ -1,10 +1,9 @@
-package com.fj_portal.fj_portal_mysql_tool.service;
+package com.fj_portal.fj_portal_mysql_tool.primary.service;
 
-import com.fj_portal.fj_portal_mysql_tool.entity.Fjtcouser;
-import com.fj_portal.fj_portal_mysql_tool.repository.FjtcouserRepository;
+import com.fj_portal.fj_portal_mysql_tool.primary.entity.Fjtcouser;
+import com.fj_portal.fj_portal_mysql_tool.primary.repository.FjtcouserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

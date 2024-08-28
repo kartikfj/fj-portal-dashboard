@@ -1,4 +1,4 @@
-package com.fj_portal.fj_portal_mysql_tool.modal;
+package com.fj_portal.fj_portal_mysql_tool.primary.modal;
 
 public class LoginUserDto {
     private String userId;
