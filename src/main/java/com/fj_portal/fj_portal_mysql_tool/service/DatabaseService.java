@@ -24,6 +24,20 @@ public class DatabaseService {
 
         return tableNames;
     }
+    public List<String> listTables(String searchTerm) {
+        String sql = "SHOW TABLES";
+        List<Map<String, Object>> tables = jdbcTemplate.queryForList(sql);
+        List<String> tableNames = new ArrayList<>();
+
+        for (Map<String, Object> table : tables) {
+            String tableName = (String) table.values().iterator().next();
+            if (tableName.toLowerCase().contains(searchTerm.toLowerCase())) {
+                tableNames.add(tableName);
+            }
+        }
+
+        return tableNames;
+    }
     public void listColumns() {
         String sql = "DESCRIBE fjtcouser";
         List<Map<String, Object>> columns = jdbcTemplate.queryForList(sql);

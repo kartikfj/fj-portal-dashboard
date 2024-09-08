@@ -4,10 +4,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Column;
 import jakarta.persistence.Table;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import java.util.Collection;
+import java.util.List;
 
+import org.springframework.security.core.GrantedAuthority;
 @Entity
 @Table(name = "fjtcouser")
-public class Fjtcouser {
+public class Fjtcouser implements UserDetails {
 
     @Id
     @Column(name = "user_id")
@@ -27,7 +32,40 @@ public class Fjtcouser {
 
     @Column(name = "role")
     private String role;
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        if (role == null) {
+            return List.of();
+        }
+        return List.of(new SimpleGrantedAuthority(role));
+    }
 
+
+
+    @Override
+    public String getUsername() {
+        return userId;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
     // Getters and Setters
     public String getUserId() {
         return userId;
